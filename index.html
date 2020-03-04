@@ -158,24 +158,6 @@
     }
     var count=0;
     Generate();
-$(function(){
-    var drag=false;
-    $('#aidiom')
-    .on('mousedown',function(){
-    	$(window).mousemove(function(){
-    		drag=true;
-    		$(window).unbind('mousemove');
-    	});
-	})
-    .mouseup(function(event){
-    	var wdrag=drag;
-    	drag=false;
-    	$(window).unbind('mousemove');
-    	if (!wdrag && event.which!=3){
-    			Generate();
-    	}
-    });
-});
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script type="text/javascript">
