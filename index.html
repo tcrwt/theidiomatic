@@ -116,7 +116,8 @@
         return result
     }
       function Flipper() {
-        flip = Math.floor(Math.random() * 8)
+        const ratioSingularToPlural = 4
+        flip = Math.floor(Math.random() * (ratioSingularToPlural+1))
         if (flip === 1) {
             return Choose(start2)+' '+Choose(end2)
         } else {
