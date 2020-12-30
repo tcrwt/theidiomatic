@@ -152,10 +152,10 @@
 	        	$('#idiom').css('height',$('#saying').height());
 	        	});
         count=count+1;
-    	var findlink=document.getElementById("fblink");
-    	findlink.setAttribute('href',"javascript:postToFeed(saying);");
-    	var findlink2=document.getElementById("twlink");
-    	findlink2.setAttribute('href','http://twitter.com/intent/tweet?text='+encodeURIComponent("\""+saying+".\" – www.theidiomatic.com \@The\_Idiomatic"));
+    	var fblink=document.getElementById("fblink");
+    	fblink.setAttribute('href',"javascript:postToFeed(saying);");
+    	var twitterlink=document.getElementById("twlink");
+    	twitterlink.setAttribute('href','http://twitter.com/intent/tweet?text='+encodeURIComponent("\""+saying+".\" – www.theidiomatic.com \@The\_Idiomatic"));
     }
     var count=0;
     Generate();
