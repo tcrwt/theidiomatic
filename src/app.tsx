@@ -1,21 +1,14 @@
-import { h } from 'preact';
-import { useState, useEffect, useRef } from 'preact/hooks';
-import './App.css';
-import { generateIdiom } from './shared/idioms';
+import { h } from "preact";
+import { useState } from "preact/hooks";
+import "./app.css";
+import { generateIdiom } from "./shared/idioms";
 
-function App() {
+export const App = () => {
   const [idiom, setIdiom] = useState(generateIdiom());
-  const containerRef = useRef<HTMLDivElement>(null);
-  const idiomRef = useRef<HTMLParagraphElement>(null);
   const onClick = () => {
     setIdiom(generateIdiom());
   };
 
-  useEffect(() => {
-    if (containerRef?.current !== null) {
-      containerRef.current.style.height = idiomRef?.current?.scrollHeight.toString() + 'px';
-    }
-  }, [idiom, idiomRef?.current?.scrollHeight]);
   return (
     <div className="app">
       <header className="header">
@@ -24,13 +17,13 @@ function App() {
       <button className="generate" onClick={onClick}>
         Generate!
       </button>
-      <div className="idiomCard" ref={containerRef}>
-        <p className="idiom" ref={idiomRef}>
-          {idiom}
-        </p>
+      <div className="cardsContainer">
+        <div className="idiomCard">{idiom}</div>
+        <div className="idiomCard">{idiom}</div>
+        <div className="idiomCard">{idiom}</div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
