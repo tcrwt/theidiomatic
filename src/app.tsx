@@ -18,9 +18,9 @@ export const App = () => {
         Generate!
       </button>
       <div className="cardsContainer">
-        <div className="idiomCard">{idiom}</div>
-        <div className="idiomCard">{idiom}</div>
-        <div className="idiomCard">{idiom}</div>
+        <div className="idiomCard">&ldquo;{idiom}&rdquo;</div>
+        <div className="idiomCard">&ldquo;{idiom}&rdquo;</div>
+        <div className="idiomCard">&ldquo;{idiom}&rdquo;</div>
       </div>
     </div>
   );
