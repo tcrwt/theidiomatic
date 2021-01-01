@@ -10,9 +10,7 @@ export const App = () => {
     Array.from({ length: numCardsToShow }, generateIdiom)
   );
   const onClick = () => {
-    const newIdiom = generateIdiom();
-    console.log("newIdiom", newIdiom);
-    setIdiomList((list) => [...idiomList, newIdiom]);
+    setIdiomList((list) => [...idiomList, generateIdiom()]);
   };
 
   return (
