@@ -11,12 +11,8 @@ function App() {
     setIdiom(generateIdiom());
   };
 
-  // console.log('containerRef', containerRef?.current && containerRef.current.scrollHeight);
-  // console.log('idiomRef', idiomRef?.current && idiomRef?.current?.scrollHeight);
   useEffect(() => {
-    console.log('idiomRef?.current', idiomRef?.current, idiomRef?.current.scrollHeight);
     if (containerRef?.current !== null) {
-      console.log('containerRef.current', containerRef.current, containerRef.current.scrollHeight);
       containerRef.current.style.height = idiomRef?.current?.scrollHeight.toString() + 'px';
     }
   }, [idiom, idiomRef?.current?.scrollHeight]);
