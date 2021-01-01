@@ -20,9 +20,6 @@ export const App = () => {
       <header className="header">
         <h1>The Idiomatic</h1>
       </header>
-      <button className="generate" onClick={onClick}>
-        Generate!
-      </button>
       <div className="cardsContainer">
         {idiomList.map((idiom, i) => {
           const indexFromEndOfList = idiomList.length - i;
@@ -31,6 +28,7 @@ export const App = () => {
             return (
               <div
                 className="idiomCard inStack"
+                onClick={onClick}
                 key={i}
                 style={{
                   //  TODO: this moves everything down a lot, rather than up
@@ -43,18 +41,23 @@ export const App = () => {
                   opacity: 1 - (indexInVisibleStack - 1) * 0.2,
                 }}
               >
-                &ldquo;{idiom}&rdquo;
+                <p className="idiomCardText">&ldquo;{idiom}&rdquo;</p>
               </div>
             );
           }
           if (indexInVisibleStack < 0 && indexInVisibleStack > -4) {
             return (
               <div className="idiomCard idiomCardSwiped" key={i}>
-                &ldquo;{idiom}&rdquo;
+                <p className="idiomCardText">&ldquo;{idiom}&rdquo;</p>
               </div>
             );
           }
         })}
+      </div>
+      <div>
+        <button className="generate" onClick={onClick}>
+          Generate!
+        </button>
       </div>
     </div>
   );
