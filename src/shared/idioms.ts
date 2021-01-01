@@ -2137,10 +2137,10 @@ const idioms: IdiomSet[] = [
     end2: '',
   },
   {
-    start1: '',
-    start2: 'This, too,',
     end1: 'shall pass',
     end2: '',
+    start1: "This, too,",
+    start2: "",
   },
   {
     start1: '',
