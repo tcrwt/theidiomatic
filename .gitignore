@@ -4,3 +4,6 @@
 node_modules/**
 .idea/**
 yarn-error.log
+snowpack.key
+snowpack.crt
+TODO.txt
