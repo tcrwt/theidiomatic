@@ -1,0 +1,144 @@
+{
+  "inputs": {
+    "web_modules/common/preact.module-ade47059.js": {
+      "bytes": 9126,
+      "imports": []
+    },
+    "web_modules/preact.js": {
+      "bytes": 74,
+      "imports": [
+        {
+          "path": "web_modules/common/preact.module-ade47059.js"
+        }
+      ]
+    },
+    "web_modules/preact/devtools.js": {
+      "bytes": 198,
+      "imports": [
+        {
+          "path": "web_modules/common/preact.module-ade47059.js"
+        }
+      ]
+    },
+    "web_modules/preact/hooks.js": {
+      "bytes": 1581,
+      "imports": [
+        {
+          "path": "web_modules/common/preact.module-ade47059.js"
+        }
+      ]
+    },
+    "dist/app.module.css.proxy.js": {
+      "bytes": 5479,
+      "imports": []
+    },
+    "dist/shared/idioms.js": {
+      "bytes": 35045,
+      "imports": []
+    },
+    "dist/app.js": {
+      "bytes": 3276,
+      "imports": [
+        {
+          "path": "web_modules/preact.js"
+        },
+        {
+          "path": "web_modules/preact/hooks.js"
+        },
+        {
+          "path": "dist/app.module.css.proxy.js"
+        },
+        {
+          "path": "dist/shared/idioms.js"
+        }
+      ]
+    },
+    "dist/index.css": {
+      "bytes": 377,
+      "imports": []
+    },
+    "__snowpack__/env.js": {
+      "bytes": 73,
+      "imports": []
+    },
+    "dist/shared/analytics.js": {
+      "bytes": 258,
+      "imports": [
+        {
+          "path": "__snowpack__/env.js"
+        }
+      ]
+    },
+    "dist/index.js": {
+      "bytes": 346,
+      "imports": [
+        {
+          "path": "web_modules/preact.js"
+        },
+        {
+          "path": "web_modules/preact/devtools.js"
+        },
+        {
+          "path": "dist/app.js"
+        },
+        {
+          "path": "dist/index.css"
+        },
+        {
+          "path": "dist/shared/analytics.js"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../node_modules/.cache/snowpack/~~bundle~~/dist/index.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "web_modules/common/preact.module-ade47059.js": {
+          "bytesInOutput": 9060
+        },
+        "web_modules/preact.js": {
+          "bytesInOutput": 0
+        },
+        "web_modules/preact/devtools.js": {
+          "bytesInOutput": 133
+        },
+        "web_modules/preact/hooks.js": {
+          "bytesInOutput": 1511
+        },
+        "dist/app.module.css.proxy.js": {
+          "bytesInOutput": 5076
+        },
+        "dist/shared/idioms.js": {
+          "bytesInOutput": 27373
+        },
+        "dist/app.js": {
+          "bytesInOutput": 1554
+        },
+        "dist/index.css": {
+          "bytesInOutput": 0
+        },
+        "__snowpack__/env.js": {
+          "bytesInOutput": 56
+        },
+        "dist/shared/analytics.js": {
+          "bytesInOutput": 121
+        },
+        "dist/index.js": {
+          "bytesInOutput": 61
+        }
+      },
+      "bytes": 44948
+    },
+    "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
+      "imports": [],
+      "inputs": {
+        "dist/index.css": {
+          "bytesInOutput": 312
+        }
+      },
+      "bytes": 313
+    }
+  }
+}
