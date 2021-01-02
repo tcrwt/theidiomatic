@@ -10,12 +10,13 @@
     <link rel="apple-touch-icon" sizes="300x300" href="/favicon-300.png" />
     <title>The Idiomatic</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="description" content="The Idiomatic automatically generates random proverbs made up of two common sayings!">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="/dist/index.js" as="script" crossOrigin="anonymous">
   </head>
   <body>
     <main id="root"></main>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
+    <script type="module" src="/dist/index.js" defer></script>
   </body>
 </html>
