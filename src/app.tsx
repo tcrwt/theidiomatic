@@ -28,11 +28,12 @@ export const App = () => {
                   key={i}
                   style={{
                     transform: `
-                    translate(0, ${-5 * indexInVisibleStack}%)
-                    scale(${1 - 0.08 * indexInVisibleStack})
+                    translate(0, ${-(3 * (indexInVisibleStack - indexInVisibleStack ** 2 / 10))}%)
+                    scale(${1 - 0.07 * indexInVisibleStack})
                 `,
+                    transformOrigin: '50% 0',
                     zIndex: indexFromEndOfList,
-                    opacity: 1 - (indexInVisibleStack - 1) * 0.2,
+                    opacity: 1 - (indexInVisibleStack - 1) * 0.15,
                   }}
                 >
                   <div className={styles.idiomTextContainer}>
