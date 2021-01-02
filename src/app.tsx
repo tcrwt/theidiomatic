@@ -5,6 +5,8 @@ import { generateIdiom } from './shared/idioms';
 
 const numCardsToShow = 5;
 
+// TODO: split this into components. Currently it's a single terrible mess
+//   but hey it works
 export const App = () => {
   const [idiomList, setIdiomList] = useState(Array.from({ length: numCardsToShow }, () => generateIdiom(true)));
   const onClick = () => {
