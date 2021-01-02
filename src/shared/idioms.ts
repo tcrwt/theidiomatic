@@ -1538,10 +1538,7 @@ idioms.forEach((idiom: IdiomSet) => {
 const choosePlural = (): boolean => {
   const ratioSingularToPlural = 4;
   const flip = Math.floor(Math.random() * (ratioSingularToPlural + 1));
-  if (flip === 1) {
-    return true;
-  }
-  return false;
+  return flip === 1;
 };
 
 // choose a random element from an array
