@@ -1,50 +1,63 @@
+@use 'sass:color';
 @use 'colors';
-
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&amp;text=The%20Idiomatic&family=Lilita+One&family=Playfair+Display:wght@800;900&family=EB+Garamond&family=Crimson+Text&family=Cormorant+Garamond&display=swap);
+@use 'fonts';
 
 .app {
   text-align: center;
   background-color: colors.$background;
-  min-height: 100vh;
+  height: 100%;
+  max-height: 100%;
+  //min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  //margin: 1.5rem 0 1.5rem 0;
+}
+
+h1 {
+  color: colors.$header-text;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: calc(1.4rem + 3vw);
+}
+
+.cardsAndButtonContainer {
+  flex: 1 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.header {
-  margin: 20px 0px 20px 0px;
-}
-
-h1 {
-  color: #676758;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 900;
-  font-size: calc(40px + (82 - 40) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .cardsContainer {
-  flex: 0.5 1 auto;
+  flex: 0.9 1 auto;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
 }
 
 .idiomCard {
-  background-color: #f5faff;
+  background-color: colors.$card-background;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   opacity: 0;
-  height: 200px;
-  padding: 15px;
+  height: 80%;
+  padding: 20px;
   transition: transform 1s ease;
   display: flex;
   flex-direction: column;
@@ -54,10 +67,15 @@ h1 {
   overflow: hidden;
 }
 
+.inStack {
+  opacity: 1;
+}
+
 .idiomCardText{
-  font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(1rem + 2vw);
+  line-height: 1.5;
   overflow: hidden;
-  font-family: 'EB Garamond', 'Crimson Text', serif;
+  font-family: fonts.$cardText;
   font-weight: 500;
   /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
   user-select: none;
