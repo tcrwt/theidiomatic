@@ -1543,9 +1543,10 @@ const randomFromArray = (arr: string[]): string => {
 };
 
 // generate an idiom
-export const generateIdiom = (): string => {
+export const generateIdiom = (withQuotes?: boolean): string => {
   const plural = choosePlural();
-  return plural
+  const idiom = plural
     ? `${randomFromArray(start2)} ${randomFromArray(end2)}.`
     : `${randomFromArray(start1)} ${randomFromArray(end1)}.`;
+  return withQuotes ? '“' + idiom + '”' : idiom;
 };
