@@ -45,6 +45,7 @@ export const App = () => {
                         idiom + ' – theidiomatic.com @The_Idiomatic',
                       )}`}
                       target="_blank"
+                      rel="noopener"
                     >
                       <span className={styles.tweetLinkLabel}>Tweet</span>
                     </a>
