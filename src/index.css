@@ -1,3 +1,7 @@
+html {
+  font-size: 100%
+}
+
 html, body, main {
   height: 100%;
 }
@@ -12,5 +16,3 @@ body {
   overflow: hidden;
   position: relative;
 }
-
-

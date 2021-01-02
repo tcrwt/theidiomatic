@@ -6,9 +6,9 @@ import { generateIdiom } from './shared/idioms';
 const numCardsToShow = 5;
 
 export const App = () => {
-  const [idiomList, setIdiomList] = useState(Array.from({ length: numCardsToShow }, generateIdiom));
+  const [idiomList, setIdiomList] = useState(Array.from({ length: numCardsToShow }, () => generateIdiom(true)));
   const onClick = () => {
-    setIdiomList((list) => [...idiomList, generateIdiom()]);
+    setIdiomList((list) => [...idiomList, generateIdiom(true)]);
   };
 
   return (
@@ -25,7 +25,6 @@ export const App = () => {
               return (
                 <div
                   className={`${styles.idiomCard} ${styles.inStack}`}
-                  onClick={onClick}
                   key={i}
                   style={{
                     transform: `
@@ -36,17 +35,44 @@ export const App = () => {
                     opacity: 1 - (indexInVisibleStack - 1) * 0.2,
                   }}
                 >
-                  <p className={styles.idiomCardText}>&ldquo;{idiom}&rdquo;</p>
+                  <div className={styles.idiomTextContainer}>
+                    <p className={styles.idiomText}>{idiom}</p>
+                  </div>
+                  <div className={styles.tweetButton}>
+                    <a
+                      className={styles.tweetLink}
+                      href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
+                        idiom + ' – theidiomatic.com @The_Idiomatic',
+                      )}`}
+                      target="_blank"
+                    >
+                      <span className={styles.tweetLinkLabel}>Tweet</span>
+                    </a>
+                  </div>
                 </div>
               );
             }
             if (indexInVisibleStack < 0 && indexInVisibleStack > -4) {
               return (
                 <div className={`${styles.idiomCard} ${styles.idiomCardSwiped}`} key={i}>
-                  <p className={styles.idiomCardText}>&ldquo;{idiom}&rdquo;</p>
+                  <div className={styles.idiomTextContainer}>
+                    <p className={styles.idiomText}>{idiom}</p>
+                  </div>
+                  <div className={styles.tweetButton}>
+                    <a
+                      className={styles.tweetLink}
+                      href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
+                        idiom + ' – theidiomatic.com @The_Idiomatic',
+                      )}`}
+                      target="_blank"
+                    >
+                      <span className={styles.tweetLinkLabel}>Tweet</span>
+                    </a>
+                  </div>
                 </div>
               );
             }
+            return null;
           })}
         </div>
         <div className={styles.generateButtonContainer}>
