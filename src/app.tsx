@@ -8,6 +8,7 @@ const numCardsToShow = 5;
 export const App = () => {
   const [idiomList, setIdiomList] = useState(Array.from({ length: numCardsToShow }, () => generateIdiom(true)));
   const onClick = () => {
+    gtag('event', 'generate_idiom');
     setIdiomList((list) => [...idiomList, generateIdiom(true)]);
   };
 
@@ -47,6 +48,12 @@ export const App = () => {
                       )}`}
                       target="_blank"
                       rel="noopener"
+                      onClick={() => {
+                        gtag('event', 'share', {
+                          content_type: 'idiom',
+                          method: 'Twitter',
+                        });
+                      }}
                     >
                       <span className={styles.tweetLinkLabel}>Tweet</span>
                     </a>

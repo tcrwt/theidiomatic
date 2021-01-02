@@ -57,3 +57,10 @@ declare module '*.png' {
 }
 
 /* CUSTOM: ADD YOUR OWN HERE */
+interface IA {
+  MODE: 'development' | 'production';
+}
+interface ImportMeta {
+  env: IA;
+}
+const gtag: any;
