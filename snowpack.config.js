@@ -4,12 +4,7 @@ module.exports = {
     public: { url: '/', static: true },
     src: { url: '/dist' },
   },
-  plugins: [
-    '@snowpack/plugin-dotenv',
-    '@snowpack/plugin-typescript',
-    '@prefresh/snowpack',
-    '@snowpack/plugin-sass',
-  ],
+  plugins: ['@snowpack/plugin-dotenv', '@snowpack/plugin-typescript', '@prefresh/snowpack', '@snowpack/plugin-sass'],
   install: [
     /* ... */
   ],
@@ -27,5 +22,12 @@ module.exports = {
   },
   alias: {
     /* ... */
+  },
+  experiments: {
+    optimize: {
+      bundle: true,
+      minify: true,
+      target: 'es2017',
+    },
   },
 };
