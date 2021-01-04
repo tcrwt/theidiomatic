@@ -16,7 +16,6 @@ export const App = () => {
 
   const onClickShare = (idiomText: string) => {
     if (navigator.share) {
-      alert(idiomText);
       navigator
         .share({
           text: idiomText,
