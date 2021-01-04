@@ -31,5 +31,6 @@
   },
   "eslintConfig": {
     "extends": "preact"
-  }
+  },
+  "browserslist": ">0.75%, not ie 11"
 }
