@@ -145,34 +145,32 @@ h1 {
   box-sizing: border-box;
   touch-action: manipulation;
   user-select: none;
-  .generateButtonInner {
-    touch-action: manipulation;
-    box-sizing: border-box;
-    color: white;
-    display: inline-block;
-    background-color: #00a7a7;
-    border: 4px solid #00a7a7;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-    user-select: none;
-    transform: translateY(-6px);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275),
-      background-color 0.1s ease,
-      border-color 0.1s ease;
-    &:hover {
-      background-color: #00adad;
-      border-color: #00adad;
-    }
-  }
   &:focus{
     outline: none;
   }
+}
+.generateButtonInner {
+  touch-action: manipulation;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  background-color: #00a7a7;
+  border: 4px solid #00a7a7;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-6px);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275),
+  background-color 0.1s ease,
+  border-color 0.1s ease;
+  &:hover {
+    background-color: #00adad;
+    border-color: #00adad;
+  }
   &:active {
-    .generateButtonInner {
-      transform: translateY(0);
-      transition: transform 0.1s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    }
+    transform: translateY(0);
+    transition: transform 0.1s cubic-bezier(0.230, 1.000, 0.320, 1.000);
   }
 }
 .tweetButton{
@@ -183,22 +181,30 @@ h1 {
   margin: 5px;
 }
 
-.tweetLink {
+.smallShare {
   position: relative;
   height: 25px;
   box-sizing: border-box;
-  padding: 1px 8px 4px 8px;
-  background-color: #1b95e0;
+  padding: 4px 8px 4px 8px;
+  margin: 2px;
   color: #fff;
   border-radius: 3px;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
+  font-size: 11px;
+}
+
+.nativeShare {
+  background-color: #868686;
   &:active, &:focus, &:hover {
-    background-color: #0c7abf;
+    background-color: #5f5f5f;
   }
 }
 
-.tweetLinkLabel{
-  font-size: 11px;
+.tweetLink {
+  background-color: #1b95e0;
+  &:active, &:focus, &:hover {
+    background-color: #0c7abf;
+  }
 }

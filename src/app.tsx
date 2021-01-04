@@ -14,6 +14,25 @@ export const App = () => {
     setIdiomList((list) => [...idiomList, generateIdiom(true)]);
   };
 
+  const onClickShare = (idiomText: string) => {
+    if (navigator.share) {
+      alert(idiomText);
+      navigator
+        .share({
+          text: idiomText,
+          title: 'The Idiomatic',
+          url: 'https://theidiomatic.com',
+        })
+        .then(() => {
+          gtag('event', 'share', {
+            content_type: 'idiom',
+            method: 'webshare',
+          });
+        })
+        .catch();
+    }
+  };
+
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -43,8 +62,13 @@ export const App = () => {
                     <p className={styles.idiomText}>{idiom}</p>
                   </div>
                   <div className={styles.tweetButton}>
+                    {navigator.share && (
+                      <a className={`${styles.smallShare} ${styles.nativeShare}`} onClick={() => onClickShare(idiom)}>
+                        <span className={styles.tweetLinkLabel}>Share</span>
+                      </a>
+                    )}
                     <a
-                      className={styles.tweetLink}
+                      className={`${styles.smallShare} ${styles.tweetLink}`}
                       href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
                         idiom + ' – theidiomatic.com @The_Idiomatic',
                       )}`}
@@ -57,7 +81,7 @@ export const App = () => {
                         });
                       }}
                     >
-                      <span className={styles.tweetLinkLabel}>Tweet</span>
+                      Tweet
                     </a>
                   </div>
                 </div>
@@ -70,14 +94,26 @@ export const App = () => {
                     <p className={styles.idiomText}>{idiom}</p>
                   </div>
                   <div className={styles.tweetButton}>
+                    {navigator.share && (
+                      <a className={`${styles.smallShare} ${styles.nativeShare}`} onClick={() => onClickShare(idiom)}>
+                        <span className={styles.tweetLinkLabel}>Share</span>
+                      </a>
+                    )}
                     <a
-                      className={styles.tweetLink}
+                      className={`${styles.smallShare} ${styles.tweetLink}`}
                       href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
                         idiom + ' – theidiomatic.com @The_Idiomatic',
                       )}`}
                       target="_blank"
+                      rel="noopener"
+                      onClick={() => {
+                        gtag('event', 'share', {
+                          content_type: 'idiom',
+                          method: 'Twitter',
+                        });
+                      }}
                     >
-                      <span className={styles.tweetLinkLabel}>Tweet</span>
+                      Tweet
                     </a>
                   </div>
                 </div>
