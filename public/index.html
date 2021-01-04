@@ -21,7 +21,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    </script>
+      var ENV = '%SNOWPACK_PUBLIC_NODE_ENV%';
+      console.log('ENV', ENV);
+      var debugMode = ENV === 'dev' || ENV.includes('%')
+      gtag('config', 'G-GJREYZZ8L1', { debug_mode: debugMode });
+      </script>
   </head>
   <body>
     <main id="root"></main>

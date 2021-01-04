@@ -1,8 +1,8 @@
 {
   "license": "UNLICENSED",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
+    "start": "SNOWPACK_PUBLIC_NODE_ENV=dev snowpack dev",
+    "build": "SNOWPACK_PUBLIC_NODE_ENV=prod snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx}\""
