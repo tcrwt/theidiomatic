@@ -1,0 +1,1 @@
+export default {"SNOWPACK_PUBLIC_NODE_ENV":"prod","SNOWPACK_PUBLIC_API_URL":"1","MODE":"production","NODE_ENV":"production","SSR":false};
