@@ -156,7 +156,7 @@ h1 {
     padding: 10px;
     cursor: pointer;
     user-select: none;
-    transform: translate(0, -6px);
+    transform: translateY(-6px);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275),
       background-color 0.1s ease,
       border-color 0.1s ease;
@@ -169,8 +169,8 @@ h1 {
     outline: none;
   }
   &:active {
-    .generateButtonInner{
-      transform: translate(0, 0);
+    .generateButtonInner {
+      transform: translateY(0);
       transition: transform 0.1s cubic-bezier(0.230, 1.000, 0.320, 1.000);
     }
   }
