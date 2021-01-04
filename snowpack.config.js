@@ -33,7 +33,7 @@ module.exports = {
     optimize: {
       bundle: true,
       minify: true,
-      target: 'es2020',
+      target: 'es2017',
     },
   },
 };
