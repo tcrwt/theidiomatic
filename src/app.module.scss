@@ -1,0 +1,201 @@
+@use 'sass:color';
+@use 'colors';
+@use 'fonts';
+
+$mq-mobile-portrait		: 320px !default;
+$mq-mobile-landscape	: 480px !default;
+$mq-tablet-portrait		: 768px !default;
+$mq-tablet-landscape	: 1024px !default;
+$mq-desktop				: 1382px !default;
+
+// Everything larger than a portrait mobile up until mobile landscape
+@mixin mobile-landscape-only {
+  @media only screen and (max-width : $mq-tablet-portrait) and (max-height: $mq-mobile-portrait){
+    @content
+  }
+}
+
+.app {
+  text-align: center;
+  background-color: colors.$background;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  flex: 0 1 auto;
+  padding-top: 1rem;
+}
+
+.cardsAndButtonContainer {
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  @include mobile-landscape-only{
+      flex-direction: row-reverse;
+      align-items: stretch;
+      justify-content: center;
+  }
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.generateButtonContainer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 4px;
+}
+
+h1 {
+  color: colors.$header-text;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: calc(1.5rem + 3vmin);
+  margin: 0;
+}
+
+.cardsContainer {
+  flex: 1 0 auto;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.idiomCard {
+  background-color: colors.$card-background;
+  border-radiius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
+  width: 90%;
+  max-width: 450px;
+  opacity: 0;
+  height: 80%;
+  padding: 5px 15px;
+  @include mobile-landscape-only{
+    width: 95%;
+    padding: 1px 5px;
+  }
+  transition: transform 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.inStack {
+  opacity: 1;
+}
+
+.idiomTextContainer{
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.idiomText{
+  font-size: calc(1.5rem + 1.5vmin);
+  margin: 0;
+  line-height: 1.5;
+  @include mobile-landscape-only{
+    line-height: 1;
+  }
+  font-family: fonts.$cardText;
+  font-weight: 500;
+  /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
+  //user-select: none;
+}
+
+.idiomCardSwiped{
+  /* TODO: this translate is weird. should it really depend on VW? */
+  transform: translate(2000px, 0) rotate(45deg);
+  z-index: 99;
+  opacity: 0;
+  transition: transform 1.5s ease, opacity 1s ease;
+}
+
+.generateButton {
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  font-size: calc(1rem + 1vmin);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  position: relative;
+  background-color: #008888;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  box-sizing: border-box;
+  .generateButtonInner{
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+    background-color: #00a7a7;
+    border: 4px solid #00a7a7;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    transform: translate(0, -6px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275),
+      background-color 0.1s ease,
+      border-color 0.1s ease;
+    &:hover {
+      background-color: #00adad;
+      border-color: #00adad;
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+  &:active {
+    .generateButtonInner{
+      transform: translate(0, 0);
+      transition: transform 0.1s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    }
+  }
+}
+.tweetButton{
+  position: relative;
+  flex: 0 1 auto;
+  bottom: 0;
+  height: 25px;
+  margin: 5px;
+}
+
+.tweetLink {
+  position: relative;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 1px 8px 4px 8px;
+  background-color: #1b95e0;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  &:active, &:focus, &:hover {
+    background-color: #0c7abf;
+  }
+}
+
+.tweetLinkLabel{
+  font-size: 11px;
+}
