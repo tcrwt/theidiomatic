@@ -29,7 +29,7 @@
       ]
     },
     "dist/app.module.css.proxy.js": {
-      "bytes": 5479,
+      "bytes": 5913,
       "imports": []
     },
     "dist/shared/idioms.js": {
@@ -37,7 +37,7 @@
       "imports": []
     },
     "dist/app.js": {
-      "bytes": 3276,
+      "bytes": 4191,
       "imports": [
         {
           "path": "web_modules/preact.js"
@@ -54,20 +54,12 @@
       ]
     },
     "dist/index.css": {
-      "bytes": 377,
-      "imports": []
-    },
-    "__snowpack__/env.js": {
-      "bytes": 73,
+      "bytes": 396,
       "imports": []
     },
     "dist/shared/analytics.js": {
-      "bytes": 258,
-      "imports": [
-        {
-          "path": "__snowpack__/env.js"
-        }
-      ]
+      "bytes": 52,
+      "imports": []
     },
     "dist/index.js": {
       "bytes": 346,
@@ -96,7 +88,7 @@
       "exports": [],
       "inputs": {
         "web_modules/common/preact.module-ade47059.js": {
-          "bytesInOutput": 9060
+          "bytesInOutput": 9081
         },
         "web_modules/preact.js": {
           "bytesInOutput": 0
@@ -108,37 +100,34 @@
           "bytesInOutput": 1511
         },
         "dist/app.module.css.proxy.js": {
-          "bytesInOutput": 5076
+          "bytesInOutput": 5490
         },
         "dist/shared/idioms.js": {
           "bytesInOutput": 27373
         },
         "dist/app.js": {
-          "bytesInOutput": 1554
+          "bytesInOutput": 2065
         },
         "dist/index.css": {
           "bytesInOutput": 0
         },
-        "__snowpack__/env.js": {
-          "bytesInOutput": 56
-        },
         "dist/shared/analytics.js": {
-          "bytesInOutput": 121
+          "bytesInOutput": 13
         },
         "dist/index.js": {
           "bytesInOutput": 61
         }
       },
-      "bytes": 44948
+      "bytes": 45730
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/index.css": {
-          "bytesInOutput": 312
+          "bytesInOutput": 328
         }
       },
-      "bytes": 313
+      "bytes": 329
     }
   }
 }

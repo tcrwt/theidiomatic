@@ -19,7 +19,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    </script>
+      var ENV = 'prod';
+      var debugMode = ENV === 'dev' || ENV.includes('%')
+      gtag('config', 'G-GJREYZZ8L1', { debug_mode: debugMode });
+      </script>
   <link rel="stylesheet" href="/dist/index.css"></head>
   <body>
     <main id="root"></main>
