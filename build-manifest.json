@@ -29,7 +29,7 @@
       ]
     },
     "dist/app.module.css.proxy.js": {
-      "bytes": 5913,
+      "bytes": 5912,
       "imports": []
     },
     "dist/shared/idioms.js": {
@@ -100,7 +100,7 @@
           "bytesInOutput": 1511
         },
         "dist/app.module.css.proxy.js": {
-          "bytesInOutput": 5490
+          "bytesInOutput": 5489
         },
         "dist/shared/idioms.js": {
           "bytesInOutput": 27373
@@ -118,7 +118,7 @@
           "bytesInOutput": 61
         }
       },
-      "bytes": 45730
+      "bytes": 45729
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
