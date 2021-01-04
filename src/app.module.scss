@@ -118,8 +118,6 @@ h1 {
   }
   font-family: fonts.$cardText;
   font-weight: 500;
-  /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
-  //user-select: none;
 }
 
 .idiomCardSwiped{
@@ -128,6 +126,8 @@ h1 {
   z-index: 99;
   opacity: 0;
   transition: transform 1.5s ease, opacity 1s ease;
+  /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
+  user-select: none;
 }
 
 .generateButton {
