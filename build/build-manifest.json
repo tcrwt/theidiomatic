@@ -29,7 +29,7 @@
       ]
     },
     "dist/app.module.css.proxy.js": {
-      "bytes": 3357,
+      "bytes": 2798,
       "imports": []
     },
     "dist/shared/idioms.js": {
@@ -37,7 +37,7 @@
       "imports": []
     },
     "dist/components/card.module.css.proxy.js": {
-      "bytes": 3185,
+      "bytes": 2543,
       "imports": []
     },
     "dist/shared/utils.js": {
@@ -79,7 +79,7 @@
       ]
     },
     "dist/index.css": {
-      "bytes": 393,
+      "bytes": 312,
       "imports": []
     },
     "dist/shared/analytics.js": {
@@ -125,13 +125,13 @@
           "bytesInOutput": 1511
         },
         "dist/app.module.css.proxy.js": {
-          "bytesInOutput": 3052
+          "bytesInOutput": 2606
         },
         "dist/shared/idioms.js": {
           "bytesInOutput": 27373
         },
         "dist/components/card.module.css.proxy.js": {
-          "bytesInOutput": 2881
+          "bytesInOutput": 2343
         },
         "dist/shared/utils.js": {
           "bytesInOutput": 26
@@ -152,16 +152,16 @@
           "bytesInOutput": 61
         }
       },
-      "bytes": 45874
+      "bytes": 44890
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/index.css": {
-          "bytesInOutput": 328
+          "bytesInOutput": 312
         }
       },
-      "bytes": 329
+      "bytes": 313
     }
   }
 }
