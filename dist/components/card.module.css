@@ -58,7 +58,6 @@
   /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -84,7 +83,6 @@
   font-size: 11px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
