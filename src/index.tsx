@@ -1,6 +1,6 @@
 import { h, render } from 'preact';
 import 'preact/devtools';
-import App from './app.js';
+import App from 'components/app.js';
 import './index.css';
 import { initialiseGoogleAnalytics } from './shared/analytics';
 

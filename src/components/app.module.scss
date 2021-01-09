@@ -1,6 +1,6 @@
 @use 'sass:color';
-@use 'colors';
-@use 'fonts';
+@use 'src/shared/colors';
+@use 'src/shared/fonts';
 
 $mq-mobile-portrait: 320px !default;
 $mq-mobile-landscape: 480px !default;
