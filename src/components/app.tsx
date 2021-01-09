@@ -49,7 +49,7 @@ export const App = () => {
           })}
         </div>
         <div className={styles.generateButtonContainer}>
-          <button className={styles.generateButton} onMouseDown={onClick} onTouchStart={() => ''}>
+          <button className={styles.generateButton} onClick={onClick} onTouchStart={() => ''}>
             <div className={styles.generateButtonInner}>Next!</div>
           </button>
         </div>

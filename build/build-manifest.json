@@ -59,7 +59,7 @@
       ]
     },
     "dist/components/app.js": {
-      "bytes": 1791,
+      "bytes": 1778,
       "imports": [
         {
           "path": "web_modules/preact.js"
@@ -140,7 +140,7 @@
           "bytesInOutput": 1068
         },
         "dist/components/app.js": {
-          "bytesInOutput": 694
+          "bytesInOutput": 690
         },
         "dist/index.css": {
           "bytesInOutput": 0
@@ -152,7 +152,7 @@
           "bytesInOutput": 61
         }
       },
-      "bytes": 45182
+      "bytes": 45178
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
