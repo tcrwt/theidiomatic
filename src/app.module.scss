@@ -2,16 +2,16 @@
 @use 'colors';
 @use 'fonts';
 
-$mq-mobile-portrait		: 320px !default;
-$mq-mobile-landscape	: 480px !default;
-$mq-tablet-portrait		: 768px !default;
-$mq-tablet-landscape	: 1024px !default;
-$mq-desktop				: 1382px !default;
+$mq-mobile-portrait: 320px !default;
+$mq-mobile-landscape: 480px !default;
+$mq-tablet-portrait: 768px !default;
+$mq-tablet-landscape: 1024px !default;
+$mq-desktop: 1382px !default;
 
 // Everything larger than a portrait mobile up until mobile landscape
 @mixin mobile-landscape-only {
-  @media only screen and (max-width : $mq-tablet-portrait) and (max-height: $mq-mobile-portrait){
-    @content
+  @media only screen and (max-width: $mq-tablet-portrait) and (max-height: $mq-mobile-portrait) {
+    @content;
   }
 }
 
@@ -38,10 +38,10 @@ $mq-desktop				: 1382px !default;
   flex: 1 0 auto;
   width: 100%;
   display: flex;
-  @include mobile-landscape-only{
-      flex-direction: row-reverse;
-      align-items: stretch;
-      justify-content: center;
+  @include mobile-landscape-only {
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: center;
   }
   flex-direction: column;
   align-items: stretch;
@@ -87,7 +87,7 @@ h1 {
   opacity: 0;
   height: 80%;
   padding: 5px 15px;
-  @include mobile-landscape-only{
+  @include mobile-landscape-only {
     width: 95%;
     padding: 1px 5px;
   }
@@ -104,24 +104,24 @@ h1 {
   opacity: 1;
 }
 
-.idiomTextContainer{
+.idiomTextContainer {
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.idiomText{
+.idiomText {
   font-size: calc(1.5rem + 1.5vmin);
   margin: 0;
   line-height: 1.5;
-  @include mobile-landscape-only{
+  @include mobile-landscape-only {
     line-height: 1;
   }
   font-family: fonts.$cardText;
   font-weight: 500;
 }
 
-.idiomCardSwiped{
+.idiomCardSwiped {
   /* TODO: this translate is weird. should it really depend on VW? */
   transform: translate(2000px, 0) rotate(45deg);
   z-index: 99;
@@ -146,7 +146,7 @@ h1 {
   box-sizing: border-box;
   touch-action: manipulation;
   user-select: none;
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
@@ -162,19 +162,17 @@ h1 {
   cursor: pointer;
   user-select: none;
   transform: translateY(-6px);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275),
-  background-color 0.1s ease,
-  border-color 0.1s ease;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.1s ease, border-color 0.1s ease;
   &:hover {
     background-color: #00adad;
     border-color: #00adad;
   }
   &:active {
     transform: translateY(0);
-    transition: transform 0.1s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
-.tweetButton{
+.tweetButton {
   position: relative;
   flex: 0 1 auto;
   bottom: 0;
@@ -199,14 +197,18 @@ h1 {
 
 .nativeShare {
   background-color: #868686;
-  &:active, &:focus, &:hover {
+  &:active,
+  &:focus,
+  &:hover {
     background-color: #5f5f5f;
   }
 }
 
 .tweetLink {
   background-color: #1b95e0;
-  &:active, &:focus, &:hover {
+  &:active,
+  &:focus,
+  &:hover {
     background-color: #0c7abf;
   }
 }
