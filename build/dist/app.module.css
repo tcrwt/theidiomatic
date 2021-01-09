@@ -66,7 +66,6 @@ h1 {
   white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   font-size: calc(1rem + 1vmin);
@@ -97,7 +96,6 @@ h1 {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transform: translateY(-6px);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.1s ease, border-color 0.1s ease;
