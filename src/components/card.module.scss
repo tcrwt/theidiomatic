@@ -37,10 +37,15 @@ $mq-desktop: 1382px !default;
   position: absolute;
   box-sizing: border-box;
   overflow: hidden;
+  user-select: none;
 }
 
 .inStack {
   opacity: 1;
+}
+
+.frontOfStack {
+  user-select: unset;
 }
 
 .idiomTextContainer {

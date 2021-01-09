@@ -30,7 +30,11 @@ export const IdiomCard = ({ idiom, indexInVisibleStack, indexFromEndOfList, swip
 
   return (
     <div
-      className={classNames(styles.idiomCard, swiped ? styles.idiomCardSwiped : styles.inStack)}
+      className={classNames(
+        styles.idiomCard,
+        swiped ? styles.idiomCardSwiped : styles.inStack,
+        indexInVisibleStack === 0 ? styles.frontOfStack : '',
+      )}
       style={
         swiped
           ? {}
