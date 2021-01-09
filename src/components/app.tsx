@@ -6,13 +6,11 @@ import { IdiomCard } from 'components/card';
 
 const numCardsToShow = 5;
 
-// TODO: split this into components. Currently it's a single terrible mess
-//   but hey it works
 export const App = () => {
   const [idiomList, setIdiomList] = useState(Array.from({ length: numCardsToShow }, () => generateIdiom(true)));
   const onClick = () => {
     gtag('event', 'generate_idiom');
-    setIdiomList((list) => [...idiomList, generateIdiom(true)]);
+    setIdiomList((list) => [...list, generateIdiom(true)]);
   };
 
   return (
@@ -51,8 +49,8 @@ export const App = () => {
           })}
         </div>
         <div className={styles.generateButtonContainer}>
-          <button className={styles.generateButton} onClick={onClick}>
-            <span className={styles.generateButtonInner}>Generate!</span>
+          <button className={styles.generateButton} onMouseDown={onClick} onTouchStart={() => ''}>
+            <div className={styles.generateButtonInner}>Next!</div>
           </button>
         </div>
       </div>
