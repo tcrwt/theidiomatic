@@ -28,8 +28,8 @@
         }
       ]
     },
-    "dist/app.module.css.proxy.js": {
-      "bytes": 2798,
+    "dist/components/app.module.css.proxy.js": {
+      "bytes": 2856,
       "imports": []
     },
     "dist/shared/idioms.js": {
@@ -37,7 +37,7 @@
       "imports": []
     },
     "dist/components/card.module.css.proxy.js": {
-      "bytes": 2543,
+      "bytes": 2736,
       "imports": []
     },
     "dist/shared/utils.js": {
@@ -45,7 +45,7 @@
       "imports": []
     },
     "dist/components/card.js": {
-      "bytes": 1898,
+      "bytes": 1952,
       "imports": [
         {
           "path": "dist/components/card.module.css.proxy.js"
@@ -58,8 +58,8 @@
         }
       ]
     },
-    "dist/app.js": {
-      "bytes": 1764,
+    "dist/components/app.js": {
+      "bytes": 1791,
       "imports": [
         {
           "path": "web_modules/preact.js"
@@ -68,7 +68,7 @@
           "path": "web_modules/preact/hooks.js"
         },
         {
-          "path": "dist/app.module.css.proxy.js"
+          "path": "dist/components/app.module.css.proxy.js"
         },
         {
           "path": "dist/shared/idioms.js"
@@ -87,7 +87,7 @@
       "imports": []
     },
     "dist/index.js": {
-      "bytes": 346,
+      "bytes": 357,
       "imports": [
         {
           "path": "web_modules/preact.js"
@@ -96,7 +96,7 @@
           "path": "web_modules/preact/devtools.js"
         },
         {
-          "path": "dist/app.js"
+          "path": "dist/components/app.js"
         },
         {
           "path": "dist/index.css"
@@ -124,23 +124,23 @@
         "web_modules/preact/hooks.js": {
           "bytesInOutput": 1511
         },
-        "dist/app.module.css.proxy.js": {
-          "bytesInOutput": 2606
+        "dist/components/app.module.css.proxy.js": {
+          "bytesInOutput": 2664
         },
         "dist/shared/idioms.js": {
           "bytesInOutput": 27373
         },
         "dist/components/card.module.css.proxy.js": {
-          "bytesInOutput": 2343
+          "bytesInOutput": 2534
         },
         "dist/shared/utils.js": {
           "bytesInOutput": 26
         },
         "dist/components/card.js": {
-          "bytesInOutput": 1044
+          "bytesInOutput": 1068
         },
-        "dist/app.js": {
-          "bytesInOutput": 675
+        "dist/components/app.js": {
+          "bytesInOutput": 694
         },
         "dist/index.css": {
           "bytesInOutput": 0
@@ -152,7 +152,7 @@
           "bytesInOutput": 61
         }
       },
-      "bytes": 44890
+      "bytes": 45182
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
