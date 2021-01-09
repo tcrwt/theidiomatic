@@ -1,14 +1,14 @@
 {
   "inputs": {
-    "web_modules/common/preact.module-ade47059.js": {
-      "bytes": 9126,
+    "web_modules/common/preact.module-45d8943d.js": {
+      "bytes": 9139,
       "imports": []
     },
     "web_modules/preact.js": {
       "bytes": 74,
       "imports": [
         {
-          "path": "web_modules/common/preact.module-ade47059.js"
+          "path": "web_modules/common/preact.module-45d8943d.js"
         }
       ]
     },
@@ -16,7 +16,7 @@
       "bytes": 198,
       "imports": [
         {
-          "path": "web_modules/common/preact.module-ade47059.js"
+          "path": "web_modules/common/preact.module-45d8943d.js"
         }
       ]
     },
@@ -24,20 +24,42 @@
       "bytes": 1581,
       "imports": [
         {
-          "path": "web_modules/common/preact.module-ade47059.js"
+          "path": "web_modules/common/preact.module-45d8943d.js"
         }
       ]
     },
     "dist/app.module.css.proxy.js": {
-      "bytes": 5912,
+      "bytes": 3297,
       "imports": []
     },
     "dist/shared/idioms.js": {
       "bytes": 35045,
       "imports": []
     },
+    "dist/components/card.module.css.proxy.js": {
+      "bytes": 3125,
+      "imports": []
+    },
+    "dist/shared/utils.js": {
+      "bytes": 69,
+      "imports": []
+    },
+    "dist/components/card.js": {
+      "bytes": 1898,
+      "imports": [
+        {
+          "path": "dist/components/card.module.css.proxy.js"
+        },
+        {
+          "path": "web_modules/preact.js"
+        },
+        {
+          "path": "dist/shared/utils.js"
+        }
+      ]
+    },
     "dist/app.js": {
-      "bytes": 4191,
+      "bytes": 1764,
       "imports": [
         {
           "path": "web_modules/preact.js"
@@ -50,11 +72,14 @@
         },
         {
           "path": "dist/shared/idioms.js"
+        },
+        {
+          "path": "dist/components/card.js"
         }
       ]
     },
     "dist/index.css": {
-      "bytes": 396,
+      "bytes": 393,
       "imports": []
     },
     "dist/shared/analytics.js": {
@@ -87,8 +112,8 @@
       "imports": [],
       "exports": [],
       "inputs": {
-        "web_modules/common/preact.module-ade47059.js": {
-          "bytesInOutput": 9081
+        "web_modules/common/preact.module-45d8943d.js": {
+          "bytesInOutput": 9100
         },
         "web_modules/preact.js": {
           "bytesInOutput": 0
@@ -100,13 +125,22 @@
           "bytesInOutput": 1511
         },
         "dist/app.module.css.proxy.js": {
-          "bytesInOutput": 5489
+          "bytesInOutput": 2994
         },
         "dist/shared/idioms.js": {
           "bytesInOutput": 27373
         },
+        "dist/components/card.module.css.proxy.js": {
+          "bytesInOutput": 2823
+        },
+        "dist/shared/utils.js": {
+          "bytesInOutput": 26
+        },
+        "dist/components/card.js": {
+          "bytesInOutput": 1044
+        },
         "dist/app.js": {
-          "bytesInOutput": 2065
+          "bytesInOutput": 675
         },
         "dist/index.css": {
           "bytesInOutput": 0
@@ -118,7 +152,7 @@
           "bytesInOutput": 61
         }
       },
-      "bytes": 45729
+      "bytes": 45758
     },
     "../node_modules/.cache/snowpack/~~bundle~~/dist/index.css": {
       "imports": [],
