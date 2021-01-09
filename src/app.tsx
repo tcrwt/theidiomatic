@@ -1,7 +1,8 @@
 import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import styles from './app.module.css';
-import { generateIdiom } from './shared/idioms';
+import { generateIdiom } from 'shared/idioms';
+import { IdiomCard } from 'components/card';
 
 const numCardsToShow = 5;
 
@@ -12,24 +13,6 @@ export const App = () => {
   const onClick = () => {
     gtag('event', 'generate_idiom');
     setIdiomList((list) => [...idiomList, generateIdiom(true)]);
-  };
-
-  const onClickShare = (idiomText: string) => {
-    if (navigator.share) {
-      navigator
-        .share({
-          text: idiomText,
-          title: 'The Idiomatic',
-          url: 'https://theidiomatic.com',
-        })
-        .then(() => {
-          gtag('event', 'share', {
-            content_type: 'idiom',
-            method: 'webshare',
-          });
-        })
-        .catch();
-    }
   };
 
   return (
@@ -44,78 +27,24 @@ export const App = () => {
             const indexInVisibleStack = numCardsToShow - indexFromEndOfList;
             if (indexInVisibleStack >= 0) {
               return (
-                <div
-                  className={`${styles.idiomCard} ${styles.inStack}`}
+                <IdiomCard
+                  idiom={idiom}
+                  indexInVisibleStack={indexInVisibleStack}
+                  indexFromEndOfList={indexFromEndOfList}
                   key={i}
-                  style={{
-                    transform: `
-                    translate(0, ${-(3 * (indexInVisibleStack - indexInVisibleStack ** 2 / 10))}%)
-                    scale(${1 - 0.07 * indexInVisibleStack})
-                `,
-                    transformOrigin: '50% 0',
-                    zIndex: indexFromEndOfList,
-                    opacity: 1 - (indexInVisibleStack - 1) * 0.15,
-                  }}
-                >
-                  <div className={styles.idiomTextContainer}>
-                    <p className={styles.idiomText}>{idiom}</p>
-                  </div>
-                  <div className={styles.tweetButton}>
-                    {navigator.share && (
-                      <a className={`${styles.smallShare} ${styles.nativeShare}`} onClick={() => onClickShare(idiom)}>
-                        <span className={styles.tweetLinkLabel}>Share</span>
-                      </a>
-                    )}
-                    <a
-                      className={`${styles.smallShare} ${styles.tweetLink}`}
-                      href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        idiom + ' – theidiomatic.com @The_Idiomatic',
-                      )}`}
-                      target="_blank"
-                      rel="noopener"
-                      onClick={() => {
-                        gtag('event', 'share', {
-                          content_type: 'idiom',
-                          method: 'Twitter',
-                        });
-                      }}
-                    >
-                      Tweet
-                    </a>
-                  </div>
-                </div>
+                  swiped={false}
+                />
               );
             }
             if (indexInVisibleStack < 0 && indexInVisibleStack > -4) {
               return (
-                <div className={`${styles.idiomCard} ${styles.idiomCardSwiped}`} key={i}>
-                  <div className={styles.idiomTextContainer}>
-                    <p className={styles.idiomText}>{idiom}</p>
-                  </div>
-                  <div className={styles.tweetButton}>
-                    {navigator.share && (
-                      <a className={`${styles.smallShare} ${styles.nativeShare}`} onClick={() => onClickShare(idiom)}>
-                        <span className={styles.tweetLinkLabel}>Share</span>
-                      </a>
-                    )}
-                    <a
-                      className={`${styles.smallShare} ${styles.tweetLink}`}
-                      href={`http://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        idiom + ' – theidiomatic.com @The_Idiomatic',
-                      )}`}
-                      target="_blank"
-                      rel="noopener"
-                      onClick={() => {
-                        gtag('event', 'share', {
-                          content_type: 'idiom',
-                          method: 'Twitter',
-                        });
-                      }}
-                    >
-                      Tweet
-                    </a>
-                  </div>
-                </div>
+                <IdiomCard
+                  idiom={idiom}
+                  indexInVisibleStack={indexInVisibleStack}
+                  indexFromEndOfList={indexFromEndOfList}
+                  key={i}
+                  swiped={true}
+                />
               );
             }
             return null;

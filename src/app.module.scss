@@ -76,61 +76,6 @@ h1 {
   position: relative;
 }
 
-.idiomCard {
-  background-color: colors.$card-background;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
-  will-change: transform, opacity;
-  width: 90%;
-  max-width: 450px;
-  opacity: 0;
-  height: 80%;
-  padding: 5px 15px;
-  @include mobile-landscape-only {
-    width: 95%;
-    padding: 1px 5px;
-  }
-  transition: transform 1s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.inStack {
-  opacity: 1;
-}
-
-.idiomTextContainer {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.idiomText {
-  font-size: calc(1.5rem + 1.5vmin);
-  margin: 0;
-  line-height: 1.5;
-  @include mobile-landscape-only {
-    line-height: 1;
-  }
-  font-family: fonts.$cardText;
-  font-weight: 500;
-}
-
-.idiomCardSwiped {
-  /* TODO: this translate is weird. should it really depend on VW? */
-  transform: translate(2000px, 0) rotate(45deg);
-  z-index: 99;
-  opacity: 0;
-  transition: transform 1.5s ease, opacity 1s ease;
-  /* TODO: this is added to prevent display bugs when spam-clicking on mobile */
-  user-select: none;
-}
-
 .generateButton {
   white-space: nowrap;
   user-select: none;
@@ -150,6 +95,7 @@ h1 {
     outline: none;
   }
 }
+
 .generateButtonInner {
   touch-action: manipulation;
   box-sizing: border-box;
@@ -170,45 +116,5 @@ h1 {
   &:active {
     transform: translateY(0);
     transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-}
-.tweetButton {
-  position: relative;
-  flex: 0 1 auto;
-  bottom: 0;
-  height: 25px;
-  margin: 5px;
-}
-
-.smallShare {
-  position: relative;
-  height: 25px;
-  box-sizing: border-box;
-  padding: 4px 8px 4px 8px;
-  margin: 2px;
-  color: #fff;
-  border-radius: 3px;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 11px;
-  user-select: none;
-}
-
-.nativeShare {
-  background-color: #868686;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: #5f5f5f;
-  }
-}
-
-.tweetLink {
-  background-color: #1b95e0;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: #0c7abf;
   }
 }
