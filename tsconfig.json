@@ -6,9 +6,12 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "jsxFactory": "h",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     /* paths - If you configure Snowpack import aliases, add them here. */
-    "paths": {},
+    "paths": {
+      "components": ["./src/components"],
+      "shared": ["./src/shared"]
+    },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
     /* Additional Options */

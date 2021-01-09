@@ -27,7 +27,8 @@ module.exports = {
     /* ... */
   },
   alias: {
-    /* ... */
+    components: './src/components',
+    shared: './src/shared',
   },
   experiments: {
     optimize: {
